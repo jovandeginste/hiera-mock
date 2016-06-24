@@ -1,6 +1,6 @@
 require 'rubygems'
 
-Gem::Specification.new do |gem|
+spec = Gem::Specification.new do |gem|
 	gem.name = "hiera-mock"
 	gem.version = "0.1.2"
 	gem.license = "Apache-2.0"
