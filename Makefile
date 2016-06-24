@@ -1,4 +1,4 @@
-GEMSPEC=hiera-router.gemspec
+GEMSPEC=hiera-mock.gemspec
 GEM_FILE_NAME=$(shell (cat $(GEMSPEC); echo "puts spec.file_name") | ruby)
 
 gem:
