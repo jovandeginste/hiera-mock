@@ -37,50 +37,53 @@ Results:
 Strings:
 
 ```
-$ hiera -c hiera.yaml mykey # from testfile.yaml
+$ hiera -c hiera.yaml mykey
 abc
 
 $ hiera -c hiera.yaml mykeyX
-7AgefRbP
+mocked-6IpG7AS502qmg9W
 
 $ hiera -c hiera.yaml mykeyX
-YIuf6Bsycd
+mocked-Ur3jfD9As5cgYV8W
 ```
 
 Arrays:
 
 ```
-$ hiera -c hiera.yaml -a myarray # from testfile.yaml
+$ hiera -a -c hiera.yaml myarray
 ["item1", "item2"]
 
-$ hiera -c hiera.yaml -a mykeyX
-["gpy21iJS",
- "mKsiUx",
- "R6dfyworj8hcWtJ",
- "LR4WlIEonA9",
- "ntAydF7HvDzb6oe",
- "A1VfWOK8xqmz",
- "KFsQPwbl8S"]
+$ hiera -a -c hiera.yaml myarrayX
+["mocked-l07OFvt29ciL",
+ "mocked-hKE3ftukpFjQUl",
+ "mocked-f2h7ncm80GFS",
+ "mocked-HJukQsfdA",
+ "mocked-lKxP9Csy5jku",
+ "mocked-9FkhtVzSNPDHn",
+ "mocked-XO0ijv9kbJG"]
 
-$ hiera -c hiera.yaml -a mykeyX
-["Y5zJEPhaQNfq", "q0xoGB92", "1fGYMNVKRcQ", "qEMxOdCP"]
+$ hiera -a -c hiera.yaml myarrayX
+["mocked-rZAM01", "mocked-wu1SV5TNjaKepmX7", "mocked-zn2qSOGxQBvb"]
 ```
 
 Hashes:
 
 ```
-$ hiera -c hiera.yaml -h myhash # from testfile.yaml
+$ hiera -h -c hiera.yaml myhash
 {"x"=>5, "y"=>3}
 
-$ hiera -c hiera.yaml -h mykeyX
-{"kpO2jfdxZ"=>"lsjMGLSH", "XnR1xYKMt"=>"n3EoVzf", "LSYRzE"=>"mbbi2EsfIr"}
+$ hiera -h -c hiera.yaml myhashX
+{"mocked-G5iNB2"=>"mocked-8SLDn1ZJO",
+ "mocked-l1JcezPomdUgZWvR"=>"mocked-TC1rJbmpf8agD0l",
+ "mocked-qDdQhL7MmSU"=>"mocked-N9BiqI",
+ "mocked-tV7k2JFCmLrYqQ"=>"mocked-5aBrK6",
+ "mocked-A4aQdgk81Cs"=>"mocked-3lnPzZ"}
 
-$ hiera -c hiera.yaml -h mykeyX
-{"o2CxT65AgdsZae4"=>"KlQ0syH6wp",
- "wcleSzUvm04rDWbt"=>"oliWSqw",
- "6RxyELOVP"=>"xnS56K",
- "VsFjzMHT6aGqKl2J"=>"jJplAtfR80sC1vnD",
- "dbAW0XET"=>"B7Qw0HutgamVWS",
- "FnuXMNc4j8q"=>"bjCKBv",
- "R6qmupQiTGo37h"=>"Amyx6FDVltWC4"}
+$ hiera -h -c hiera.yaml myhashX
+{"mocked-ToJXAv5"=>"mocked-Z6Jt7Wbydao",
+ "mocked-KkYo3TIy26"=>"mocked-5UgtjJ8MZ6mLfn",
+ "mocked-eK5nR8s1CP6y4MV"=>"mocked-XD3x1GEK",
+ "mocked-TRvgZjsSJ7WGdnHB"=>"mocked-meSNKLVxtsYo",
+ "mocked-fONpret"=>"mocked-gyOmbIzXEdVlAfS",
+ "mocked-PqQi9BUm2bv"=>"mocked-pxhn5kV9RoE"}
 ```

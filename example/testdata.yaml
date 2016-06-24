@@ -1,0 +1,10 @@
+---
+mykey: abc
+
+myhash:
+  x: 5
+  y: 3
+
+myarray:
+  - item1
+  - item2

@@ -1,0 +1,6 @@
+:backends:
+  - mock
+:logger: console
+#:hierarchy: # not relevant
+:mock:
+  :datafile: ./testdata.yaml
