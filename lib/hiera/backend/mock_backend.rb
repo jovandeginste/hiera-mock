@@ -8,11 +8,11 @@ class Hiera
 
 				datafile = Config[:mock][:datafile]
 
-				@data = if datafile and File.exists?(datafile)
-									YAML.load(File.read(datafile))
-								else
-									{}
-								end
+				if datafile and File.exists?(datafile)
+					@data = YAML.load(File.read(datafile))
+				end
+
+				@data ||= {}
 
 				Hiera.debug("hiera mock initialized")
 			end

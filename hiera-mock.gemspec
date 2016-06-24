@@ -2,7 +2,7 @@ require 'rubygems'
 
 Gem::Specification.new do |gem|
 	gem.name = "hiera-mock"
-	gem.version = "0.1.1"
+	gem.version = "0.1.2"
 	gem.license = "Apache-2.0"
 	gem.summary = "Hiera backend to return data from a single yaml file or random data (meant for testing purposes)"
 	gem.email = ["jo.vandeginste@kuleuven.be", "tom.leuse@kuleuven.be"]
