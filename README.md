@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/hiera-mock.svg)](https://badge.fury.io/rb/hiera-mock)
+
 # hiera-mock
 
 Hiera backend to return data from a single yaml file or random data (meant for testing purposes)
