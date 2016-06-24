@@ -58,7 +58,7 @@ class Hiera
 			def random_string
 				chars = ['a'..'z', 'A'..'Z', '0'..'9'].flat_map(&:to_a)
 				size = rand(6..16)
-				return chars.sample(size).join
+				return 'mocked-' + chars.sample(size).join
 			end
 		end
 	end
