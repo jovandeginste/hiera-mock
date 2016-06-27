@@ -6,31 +6,7 @@ Hiera backend to return data from a single yaml file or random data (meant for t
 
 ## Example
 
-Content of `hiera.yaml`:
-
-```yaml
-:backends:
-  - mock
-:logger: console
-#:hierarchy: # not relevant
-:mock:
-  :datafile: ./testdata.yaml
-```
-
-Content of `testdata.yaml`:
-
-```yaml
----
-mykey: abc
-
-myhash:
-  x: 5
-  y: 3
-
-myarray:
-  - item1
-  - item2
-```
+Content of `hiera.yaml` and `testdata.yaml` are in `./example`
 
 Results:
 
@@ -87,3 +63,21 @@ $ hiera -h -c hiera.yaml myhashX
  "mocked-fONpret"=>"mocked-gyOmbIzXEdVlAfS",
  "mocked-PqQi9BUm2bv"=>"mocked-pxhn5kV9RoE"}
 ```
+
+Nil:
+
+```
+$ hiera -c hiera.yaml mynil
+nil
+
+$ hiera -c hiera.yaml -a mynil
+nil
+
+$ hiera -c hiera.yaml -h mynil
+nil
+
+$ hiera -c hiera.yaml mynilX
+mocked-40G8krjTNseao
+```
+
+Returning `nil` will first go to the next hiera layer, and finally (if nothing else returns _something_) make the hiera function use the default value. If no default was defined in the function call, it will throw an error. Using `~` in `hiera-mock` will make such situations visible.

@@ -8,3 +8,4 @@ myhash:
 myarray:
   - item1
   - item2
+mynil: ~
