@@ -1,3 +1,4 @@
+require 'digest/md5'
 class Hiera
 	module Backend
 		class Mock_backend
@@ -12,6 +13,7 @@ class Hiera
 					@data = YAML.load(File.read(datafile))
 				end
 
+				@deterministic = Config[:mock][:deterministic]
 				@data ||= {}
 
 				Hiera.debug("hiera mock initialized")
@@ -22,6 +24,10 @@ class Hiera
 				return @data[key] if @data.include?(key)
 
 				Hiera.debug("Couldn't find '#{key}' -- making up random data...")
+
+				if(@deterministic)
+					srand(Digest::MD5.hexdigest(key)[0..8].to_i(16))
+				end
 
 				case resolution_type
 				when :array
